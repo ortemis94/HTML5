@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>quiz03 Main페이지</title>
+
+<style type="text/css">
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	word-break: break-all;
+}
+
+div#container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/* header */
+img {
+	margin-top: 20px;
+}
+
+ul { 
+	list-style-type: none;
+}
+
+header#page_header li {
+	display: inline-block;
+	font-weight: bold;
+	color: navy;
+	font-size: 13pt;
+	margin: 0 50px 0 10px;
+}
+
+/* section */
+section {
+	display: inline-block;
+	height: 450px;
+}
+
+section#login {
+	float: left;
+	width: 25%;
+	background-color: #989a9a;
+}
+
+section#article {
+	float: right;
+	width: 73.5%;
+	background-color: #303636;
+}
+
+section#login label {
+	display: inline-block;
+	color: white;
+	width: 70px;
+	font-size: 10pt;
+	margin-top: 10px; 
+}
+
+section#login ul {
+	padding: 0;
+	margin: 5px 0 0 25px;
+}
+
+#login > form > ul > li:nth-child(3) > input[type=submit]:nth-child(1) {
+	margin: 10px 0 0 160px;
+}
+
+section#article p {
+	color: #f7f0d4;
+	padding: 10px 0 0 17px;
+	line-height: 10pt;	
+}
+
+p.article_title {
+	font-size: 15pt;
+}
+
+/* footer */
+footer {
+	clear: both;
+	height: 50px;
+	background-color: #cbcdcd;
+	text-align: center;
+	padding-top: 4px;
+	font-size: 11pt;
+}
+
+
+</style>
+
+</head>
+<body>
+
+	<div id="container">
+	
+		<!-- header -->
+		<header id="page_header"> 
+			<img src="images/daum.png" width="200" height="100" alt="다음 로고"> <!-- 로고 -->
+			
+			<nav> <!-- 메뉴 -->
+				<ul>
+					<li>카페</li>
+					<li>메일</li>
+					<li>뉴스</li>
+					<li>지도</li>
+					<li>증권</li>
+					<li>블로그</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<!-- section -->
+		<section id="login"> <!-- 좌측 로그인 폼 -->
+			<form action="login.do">
+				<ul>
+					<li>
+						<label for="userid">아이디</label>
+						<input type="text" name="userid" size="15" placeholder="아이디"/>
+					</li>
+					<li>
+						<label for="passwd">비밀번호</label>
+						<input type="password" name="passwd" size="15" placeholder="비밀번호"/>
+					</li>
+					<li>
+						<input type="submit" value="로그인" />
+						<input type="reset" value="취소" />
+					</li>
+				</ul>
+			</form>
+		</section>
+		
+		<section id="article"> <!-- 우측 기사 -->
+			<p class="article_title">기사1 제목입력</p>
+			<p>&quot;부동산 거래 동맥경화 우려..금리인하 검토시기 왔다&quot;</p>
+			<p class="article_title">기사2 제목입력</p>
+			<p>&quot;예매창 지붕 뚫었다&quot;..&#039;어벤져스:엔드게임&#039; 4DX, 예매 오픈 후 순삭 &#039;매진&#039;[공식입장]</p>
+		</section>
+
+		<!-- footer -->
+		<footer>
+			<p>Copyright &copy; Kakao Corp. All rights reserved.</p>
+		</footer>
+	
+	</div> 
+	<!-- #container end -->
+
+</body>
+</html>

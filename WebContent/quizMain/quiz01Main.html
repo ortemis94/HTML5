@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device_width, initial-scale=1">
+<!-- 반응형웹을 위해 width 크기 지정 - 장치 width에 맞춤. -->
+<title>quiz01 Main페이지</title>
+
+<style type="text/css">
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	word-break: break-all;
+}
+
+div#container {
+ 	width: 1200px; 
+	margin: 30px auto;
+}
+
+/* header */
+div.header {
+	display: inline-block;
+}
+
+div#logo {
+	margin-left: 40px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul#login {
+	padding: 0;
+}
+
+label.title {
+ 	display: inline-block;
+ 	margin: 0;
+	padding: 5px 0 0 0;
+	width: 70px;
+}
+
+#container > header > div > form > ul > li:nth-child(3) > input[type=submit]:nth-child(1) {
+	margin-top: 10px;
+	margin-left: 74px;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+/* section */
+section {
+	display: inline-block;
+ 	height: 450px; 
+}
+
+section#menu {
+	float: left;
+	background-color: #989a9a;
+	width: 25%;
+}
+
+li.li1 {
+	line-height: 35pt;
+	font-weight: bold;
+	color: white;
+	margin-left: 15px;
+}
+
+section#article {
+	float: right;
+	background-color: #303636;
+ 	width: 73.5%;
+	background-color: #303636;
+}
+
+p.p1 {
+	line-height: 10pt;
+	padding: 10px 0 0 17px;
+	color: #f7f0d4;
+}
+
+
+article > p:nth-child(1), article > p:nth-child(3) {
+	font-size: 15pt;
+}
+
+/* footer */
+footer {
+	clear: both;
+	background-color: #cbcdcd;
+	text-align: center;
+	padding-top: 4px;
+	font-size: 11pt;
+	height: 50px;
+}
+</style>
+
+</head>
+<body>
+
+	<div id="container"> <!-- 전체 틀 -->
+		
+		<!-- header -->
+		<header>
+			<div class="header"> <!-- 로그인 폼 -->
+				<form action="login.do">
+					<ul id="login">
+						<li>
+							<label class="title" for="userid">아이디</label> 
+							<input type="text" name="userid" placeholder="아이디" />
+						</li>
+
+						<li>
+							<label class="title" for="passwd">비밀번호</label> 
+							<input type="password" name="passwd" placeholder="비밀번호" />
+						</li>
+
+						<li>
+							<input type="submit" value="로그인" /> 
+							<input type="reset" value="취소" />
+						</li>
+					</ul>
+				</form>
+			</div>
+
+			<div class="header" id="logo"> <!-- 페이지 로고 -->
+				<img src="images/daum.png" width="200" height="100" alt="다음 로고">
+			</div>
+		</header>
+
+		<!-- section -->
+		<section id="menu"> <!-- 좌측 메뉴 -->
+			<nav>
+				<ul>
+					<li class="li1">카페</li>
+					<li class="li1">메일</li>
+					<li class="li1">뉴스</li>
+					<li class="li1">지도</li>
+					<li class="li1">증권</li>
+					<li class="li1">블로그</li>
+				</ul>
+			</nav>
+		</section>
+
+		<section id="article"> <!-- 우측 기사 -->
+			<article>
+				<p class="p1">기사1 제목입력</p>
+				<p class="p1">&quot;부동산 거래 동맥경화 우려..금리인하 검토시기 왔다&quot;</p>
+				<p class="p1">기사2 제목입력</p>
+				<p class="p1">&quot;예매창 지붕 뚫었다&quot;..&#039;어벤져스:엔드게임&#039; 4DX, 예매 오픈 후 순삭 &#039;매진&#039;[공식입장]</p>
+			</article>
+		</section>
+
+		<!-- footer -->
+		<footer>
+			<p>Copyright &copy; Kakao Corp. All rights reserved.</p>
+		</footer>
+
+	</div>
+	<!-- #container end -->
+
+</body>
+</html>

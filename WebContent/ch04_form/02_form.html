@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form에 대해서 알아봅니다.-2</title>
+
+<style type="text/css">
+
+	body {
+/* 		border: solid 1px gray; */
+		margin: 0;
+		padding: 0;
+		font-family: Arial, "MS Trebuchet", sans-serif;
+		word-break: break-all; /* 공백없이 영어로만 되어질 경우 해당구역을 빠져나가므로 이것을 막기위해서 사용한다. */ 
+	}
+
+	#container {
+/* 		border: solid 1px blue; */
+		width: 80%;
+		margin: 0 auto; 
+	}
+	
+	legend {
+		font-size: 20pt;
+	}
+	
+	ul {
+/*  	border: solid 1px red; */ 
+		list-style-type: none;
+		padding: 0;		
+	}
+	
+	ul > li {
+		line-height: 40px; 
+	}
+	
+	label.title {
+		display: inline-block;
+		width: 100px;
+		color: navy;
+		font-weight: bold; 
+	}
+	
+	input.myinput {
+		height: 20px;
+	}
+	
+	input.btn {
+		width: 100px;
+		height: 40px;
+		background-color: #000;
+		color: #fff;
+		font-size: 16pt;
+		border: none;
+		margin: 20px 0 0 40px;
+	}
+
+	select {
+		width: 150px;
+	}
+	
+	select.myselect {
+		height: 25px;
+	}
+	
+	
+</style>
+
+</head>
+<body>
+
+	<div id="container">
+		
+		<form action="register.do">
+			<fieldset>
+				<legend>회원가입정보</legend>
+				
+				<ul>
+					<li>
+						<label for="userid" class="title">아이디</label>
+						<input type="text" name="userid" id="userid" class="myinput" size="20" maxlength="20" autofocus required />
+					</li>
+					
+					<li>
+						<label for="passwd1" class="title">암호</label>
+						<input type="password" name="passwd" id="passwd1" class="myinput" size="20" maxlength="20" required />
+					</li>
+					
+					<li>
+						<label for="passwd2" class="title">암호확인</label>
+						<input type="password" id=passwd2 class="myinput" size="20" maxlength="20" required />
+					</li>
+					
+					<li>
+						<label for="name" class="title">성명</label>
+						<input type="text"  name="name" id="name" class="myinput" size="20" maxlength="20" required />
+					</li>
+					
+					<li>
+						<label for="email" class="title">이메일</label>
+						<input type="email" name="email" id="email" class="myinput" size="20" maxlength="20" required placeholder="예: hongkd@gmail.com" />
+					</li>
+					
+					<li>
+						<label class="title">성별</label>
+						<label for="male">남자</label>
+						<input type="radio" name="gender" id="male" value="1" /> <!-- name으로 라디오 버튼을 그룹으로 묶을 수 있음. 같은 name인 라디오 버튼끼리는 택1만 가능함. -->
+						<label for="female">여자</label>
+						<input type="radio" name="gender" id="female" value="2" checked/> <!-- 라디오 버튼은 checked를 기입하면 기본값으로 체크되어진다. -->
+					</li>
+					
+					<li>
+						<label class="title">취미</label>
+						<label for="hobby1">게임</label><input type="checkbox" name="hobby" id="hobby1" value="1" checked/>&nbsp;&nbsp; <!-- 체크박스 버튼은 checked를 기입하면 기본값으로 체크되어진다. -->
+						<label for="hobby2">영화감상</label><input type="checkbox" name="hobby" id="hobby2" value="2" />&nbsp;&nbsp;
+						<label for="hobby3">글쓰기</label><input type="checkbox" name="hobby" id="hobby3" value="3" checked/>&nbsp;&nbsp; 
+						<label for="hobby4">음악감상</label><input type="checkbox" name="hobby" id="hobby4" value="4" />
+					</li>
+					
+					<li>
+						<label class="title">최종학력</label>
+						<select name="school" class="myselect">
+							<option value="1">고졸</option> <!-- value 값을 적지 않으면 "고졸"이라는  값이 넘어감. -->
+							<option value="2" selected>초대졸</option> <!-- select 옵션은 selected를 기입하면 기본값으로 체크되어진다. -->
+							<option value="3">대졸</option>
+							<option value="4">대학원졸</option>
+						</select>
+					</li>
+					
+					<li>
+						<label class="title">선호음식</label>
+						<select name="food" size="3" multiple>
+							<option>짜장면</option> <!-- value 값을 적지 않으면 "짜장면"이라는  값이 넘어감. -->
+							<option>파스타</option>
+							<option>팟타이</option>
+							<option>부대찌개</option>
+							<option>떡볶이</option>
+							<option>치킨</option>
+						</select>
+					</li>
+					
+					<li>
+						<label class="title">선호프로그램</label>
+						<select name="program" class="myselect">
+							<optgroup label="데이터베이스">
+								<option>Oracle</option>
+								<option>MSSQL</option> 
+								<option>SyBase</option>
+							</optgroup>
+							
+							<optgroup label="개발언어">
+								<option>Java</option>
+								<option>JSP</option>
+								<option>Spring</option>
+								<option>C/C++</option>
+							</optgroup>
+						</select>
+					</li>
+					
+					<li>
+						<label for="browsername" class="title">웹브라우저</label>
+						<input name="browserType" list="browserType" id="browsername" /> <!-- 옵션중에 선택하거나 글을직접쓰거나 할 수 있음 -->
+						<datalist id="browserType">	
+							<option value="Chrome"/>
+							<option value="Internet Explore"/>
+							<option value="Firefox"/>
+							<option value="Opera"/>
+							<option value="Safari"/>
+						</datalist>
+					</li>
+					
+					<li>
+						<label for="addFile" class="title">파일첨부</label>
+						<input type="file" name="addFile" id="addFile"/>
+					</li>
+					
+					<li>
+						<label for="registerComment" class="title">가입인사말</label>
+						<textarea name="registerComment" id="registerComment" rows="5" cols="30"></textarea>
+					</li>
+
+					<li>
+						<input class="btn" type="submit" value="확인" />
+						<input class="btn" type="reset" value="취소" />
+					</li>
+					
+				</ul>
+				
+			</fieldset>
+		</form>
+	
+	</div>
+
+</body>
+</html>
